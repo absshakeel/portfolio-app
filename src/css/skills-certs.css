@@ -1,0 +1,50 @@
+/* Skills & Certifications Style Properties */
+#skills {
+    width: 50%; 
+    float: left;
+    clear: both;
+    height: 450px; 
+    color: dimgrey; 
+    background-color: white; 
+    border-right: 2px solid dimgrey; 
+}
+
+#skills h4{
+    text-align: center; 
+    margin: 2% 0 2% 0; 
+}
+
+#skills_certs li{
+    float: left;
+    margin: 0 6% 0% 0%;
+}
+
+#skillsOne, #skillsTwo, #skillsThree {
+    margin: 3% 2% 3% 2%;
+    float: left;
+}
+
+#certs{
+    width: 50%; 
+    float: left; 
+    height: 450px; 
+    background-color: white; 
+}
+
+#certs h4{
+    text-align: center; 
+    margin: 2% 0 2% 0; 
+}
+
+#certs img{
+    width: 90px; 
+    height: 90px; 
+    float: left; 
+    margin: 5% 5% 5% 5%; 
+    display: block;
+}
+
+#mgraward{
+    width: 130px !important; 
+}
+

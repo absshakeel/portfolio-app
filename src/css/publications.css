@@ -1,0 +1,163 @@
+/* Publications: Styling Properties */
+#publications{
+    height: 320px; 
+    background-color: transparent; 
+}
+
+#pub1{
+    width: 30%; 
+    float: left; 
+}
+
+#pub1 h2{
+    color: white; 
+    line-height: 6em; 
+    margin: 5% 10% 0% 25%; 
+
+}
+
+
+/* Timeline Stylesheet Properties */
+
+.timeline {
+    margin-left: 25%;
+}
+
+.timeline ul {
+/*    background: dimgrey;*/
+    padding: 50px 0;
+}
+
+.timeline ul li {
+    list-style-type: none;
+    position: relative;
+    width: 4px;
+    margin: 0 auto;
+    padding-top: 5px;
+    background: white;
+}
+
+.timeline ul li::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 54%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: dimgrey;
+    border: 3px solid white;
+        ; 
+}
+
+.timeline ul li p {
+    position: relative;
+    bottom: 0;
+    width: 300px;
+    padding: 15px;
+    background: white;
+    color: dimgrey; 
+}
+
+
+.timeline ul li p::before {
+    content: '';
+    position: absolute;
+    bottom: 75%;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+
+.timeline ul li time {
+    position: relative;
+    bottom: 0;
+    width: 170px;
+    height: 30px; 
+    padding: 2px;
+    background: white;
+    text-align: center; 
+    color: dimgrey; 
+    
+}
+
+.timeline ul li time::before {
+    content: '';
+    position: absolute;
+    bottom: 80%;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+.timeline ul li:nth-child(odd) p {
+    left: 45px;
+}
+
+.timeline ul li:nth-child(odd) p::before {
+    left: -15px;
+    border-width: 8px 16px 8px 0;
+    border-color: transparent white transparent transparent;
+}
+
+.timeline ul li:nth-child(odd) time {
+    left: -205px;
+    top: 45px; 
+}
+
+.timeline ul li:nth-child(odd) time::before {
+    right: -15px;
+    top: 10px; 
+    border-width: 8px 0 8px 16px;
+    border-color: transparent transparent transparent white;
+}
+
+time {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+
+
+/* Timeline Effects */
+
+.timeline ul li::after {
+    transition: background .5s ease-in-out;
+}
+
+.timeline ul li.in-view::after {
+    background: white;
+}
+
+.timeline ul li time {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.7s ease-in-out;
+}
+.timeline ul li p {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.7s ease-in-out;
+}
+
+.timeline ul li p {
+    transform: translate3d(200px, 0, 0);
+}
+
+.timeline ul li time{
+    transform: translate3d(-200px, 0, 0);
+}
+
+.timeline ul li.in-view time {
+    transform: none;
+    visibility: visible;
+    opacity: 1;
+}
+
+.timeline ul li.in-view p {
+    transform: none;
+    visibility: visible;
+    opacity: 1;
+}

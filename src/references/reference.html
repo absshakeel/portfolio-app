@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<!-- Added doctype html to ensure markups are getting rendered properly -->
+<html>
+    <head>
+        <title>Abhishek Madhusudhan</title>
+
+        <!-- Google Material Design Lite -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.deep_purple-pink.min.css">
+        <link rel="stylesheet" href="styles.css">
+
+        <!-- Google Material Icons -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <!-- Bootstrap Accordian -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+        <!-- BANNER & HEADER Stylesheet -->
+        <link rel="stylesheet" href="css/banner-header.css"/>
+
+        <!-- PROJECTS Stylesheet -->
+        <link rel="stylesheet" href="css/projects.css"/>
+
+        <!-- SKILLS & CERTS Stylesheet -->
+        <link rel="stylesheet" href="css/skills-certs.css"/>
+
+        <!-- PUBLICATIONS Stylesheet -->
+        <link rel="stylesheet" href="css/publications.css"/>
+
+        <!-- RECOMMENDATIONS Stylesheet -->
+        <link rel="stylesheet" href="css/recommendations.css"/>
+
+        <!-- FOOTER Stylesheet -->
+        <link rel="stylesheet" href="css/footer.css"/>
+
+        <!-- EXPERIENCE & EDUCATION Stylesheet -->
+        <link rel="stylesheet" href="css/exp-edu.css"/>
+
+        <!-- Common Stylesheet --> 
+        <link rel="stylesheet" href="css/common-styling.css"/>
+
+    </head>
+
+    <body class = "mdl-demo mdl-base">
+
+        <!-- TODO: Separate the styling for Dialogs -->
+        <!-- GMU Dialog -->
+        <div class="modal fade" id="gmuModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header" style="background-color: darkgreen;display: block; text-align: center;">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color: white;">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h5 class="modal-title" id="exampleModalLongTitle" style="background-color: darkgreen; color: white;  text-align: center;">George Mason University</h5>
+                    </div>
+                    <div class="modal-body">
+                        <p><b>August 2016 - May 2018</b></p>
+                        <p><b>The Volgenau School of Engineering,</b><br />
+                            4400 University Dr, Fairfax <br />
+                            VA 22030<br /></p>
+                        <p><b>Courses</b></p>
+                        <ul style="list-style-type: square">
+                            <li> Systems Programming </li>
+                            <li> Datastructurs &amp; Algorithms </li>
+                            <li> Component Based Software Development </li>
+                            <li> Introduction to Artificial Intelligence </li>
+                            <li> Blockchain Technologies </li>
+                            <li> Advanced Artificial Intelligence </li>
+                            <li> Analysis of Algorithms </li>
+                            <li> Security Theory and Practice </li>
+                            <li> User Interface Design</li>
+                            <li> Secure Software Design </li>
+                        </ul>
+                        <b style="color: darkgreen"> Master's of Science in Computer Science | GPA: 3.5</b> <br /><br />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- VTU Dialog -->
+        <div class="modal fade" id="vtuModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header" style="background-color: darkorange;display: block; text-align: center;">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color: white;">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h5 class="modal-title" id="exampleModalLongTitle" style="background-color: darkorange; color: white;  text-align: center;">Visvesvaraya Technological University</h5>
+                    </div>
+                    <div class="modal-body">
+                        <p><b>August 2010 - August 2014</b></p>
+                        <p><b>Bangalore Institute of Technology,</b><br />
+                            KR Road, V V Puram, Bengaluru, <br />
+                            Karnataka 560004, India<br /></p>
+
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp; A 4 year undegraduate course covering breadth of topics like operating systems, formal automata, programming languages, databases, applied mathematics, software lifecycles, computer architecture, modelling and design, algorithms, compiler design and many more.</p>
+
+                        <b style="color: darkorange"> Bachelor's of Engineering in Computer Science </b><br /><br />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Certifications Dialog -->
+        <!-- Certification 1 - OCPJP -->
+        <div class="modal fade" id="ocpjpModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" class = ".container-fluid" style="margin-top: 5%; margin-left: -18%;">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header" style="background-color: red;display: block; text-align: center; width: 800px">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color: white;">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h5 class="modal-title" id="exampleModalLongTitle" style="background-color: red; color: white;  text-align: center;">Oracle Certified Professional Java Programmer</h5>
+                    </div>
+                    <div class="modal-body" style="width: 800px; background-color: white;">
+                        <img class = ".img-fluid" style="max-width: 780px; height: auto;" src="assets/Certifications-Resume/Certifications/OCPJP.jpg"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Certification 2 - Web Services -->
+        <div class="modal fade" id="ocwModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" class = ".container-fluid" style="margin-top: 5%; margin-left: -18%;">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content" >
+                    <div class="modal-header" style="background-color: red;display: block; text-align: center; width: 800px">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color: white;">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h5 class="modal-title" id="exampleModalLongTitle" style="background-color: red; color: white;  text-align: center;">Oracle Certified - Application Developer</h5>
+                    </div>
+                    <div class="modal-body" style="width: 800px; background-color: white;">
+                        <img class = ".img-fluid" style="max-width: 780px; height: auto;" src="assets/Certifications-Resume/Certifications/OW.jpg"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Certification 3 - Coursera Android -->
+        <div class="modal fade" id="courseraAndroid" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" class = ".container-fluid">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content" >
+                    <div class="modal-header" style="background-color: royalblue;display: block; text-align: center;">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color: white;">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h5 class="modal-title" id="exampleModalLongTitle" style="background-color: royalblue; color: white;  text-align: center;">Coursera - Android Application Development</h5>
+                    </div>
+                    <div class="modal-body">
+                        <img class = ".img-fluid" style="max-width: 100%; height: auto;" src="assets/Certifications-Resume/Certifications/Coursera%20Android.jpg"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Certification 4 - IBM Deep Skill Award -->
+        <div class="modal fade" id="ibmdeepskill" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" class = ".container-fluid">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content" >
+                    <div class="modal-header" style="background-color: firebrick;display: block; text-align: center;">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color: white;">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h5 class="modal-title" id="exampleModalLongTitle" style="background-color: firebrick; color: white;  text-align: center;">IBM - Deep Skill Award</h5>
+                    </div>
+                    <div class="modal-body" style="margin:auto; display: block;">
+                        <img class = ".img-fluid" style="max-width: 100%; height: auto;" src="assets/Certifications-Resume/Certifications/Deep%20Skill.PNG"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Certification 5 - Web Services -->
+        <div class="modal fade" id="ibmmgraward" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" class = ".container-fluid">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content" >
+                    <div class="modal-header" style="background-color: royalblue;display: block; text-align: center;">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="color: white;">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h5 class="modal-title" id="exampleModalLongTitle" style="background-color: royalblue; color: white;  text-align: center;">IBM - Manager's Choice Award</h5>
+                    </div>
+                    <div class="modal-body" style="margin: auto; display: block;">
+                        <img class = ".img-fluid" style="max-width: 100%; height: auto;" src="assets/Certifications-Resume/Certifications/mgrChoice.PNG"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout__header--transparent">
+            <!--Navigation bar -->
+            <div class="android-header mdl-layout__header mdl-layout__header--transparent mdl-layout__header--waterfall mdl-layout__header--transparent">
+                <div class="mdl-layout__header-row" style="margin-left: 6%">
+                    <div>
+                        <ul class="social-nav">
+                            <li><a href="https://www.linkedin.com/in/abhishekmadhusudhan" target="_blank" title="Linkedin" rel="nofollow" class="linkedin"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="https://twitter.com/?lang=en" target="_blank" title="Twitter" rel="nofollow" class="twitter"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="https://github.com/AbhishekM369" target="_blank" title="Github" rel="nofollow" class="github"><i class="fa fa-github"></i></a></li>
+                            <li><a href="https://www.hackerrank.com/abhishekm369" target="_blank" title="HackerRank" rel="nofollow" class="hackerrank"><span class="fa fa-a" style="font-family: sans-serif">H</span></a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Download link for resume -->
+                    <a href="assets/Certifications-Resume/Resume/Abhishek%20Madhusudhan%20-%20Resume.pdf" style="float: left; clear: both; margin: 2% 2% 2% 2%; font-size: 32px; border-radius: 4px; display: block;" download>
+                        <span class="fa fa-download" style="color: white; rgb(72, 72, 72);"><span style="font-size: 16px; font-family: Roboto; color: white; vertical-align: middle; display: inline-block; margin-left: 10px">Resume</span></span> 
+                    </a>
+
+                    <!-- Add spacer, to align navigation to the right in desktop -->
+                    <div class="android-header-spacer mdl-layout-spacer"></div>
+
+                    <!-- Navigation -->
+                    <div id = "navBar" class="android-navigation-container">
+                        <nav class="android-navigation mdl-navigation">
+                            <a class="mdl-navigation__link mdl-typography--text-uppercase smooth" href="#">Home</a>
+                            <a class="mdl-navigation__link mdl-typography--text-uppercase smooth" href="#emphist">Experience</a>
+                            <a class="mdl-navigation__link mdl-typography--text-uppercase smooth" href="#eduhist">Education</a>
+                            <a class="mdl-navigation__link mdl-typography--text-uppercase smooth" href="#projects">Projects</a>
+                            <a class="mdl-navigation__link mdl-typography--text-uppercase smooth" href="#skills_certs">Skills &amp; Awards</a>
+                            <a class="mdl-navigation__link mdl-typography--text-uppercase smooth" href="#publications">Publication</a>
+                            <a class="mdl-navigation__link mdl-typography--text-uppercase smooth" href="#recommendations">Recommendations</a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+
+            <div class="android-drawer mdl-layout__drawer">
+                <span class="mdl-layout-title" style="color: white;">
+                    <!--           TODO ADD Something Here To have good aesthetic look during viewing also icons for the portfolio and blog just like settings in google chrome browsers-->
+                    AM
+                </span>
+                <nav class="mdl-navigation">
+                    <a style="text-decoration: none;" class="mdl-navigation__link" target="_blank" href="www.abhimadhu.com"> <i class="fa fa-user" style="font-size: 20px; color:#484848"></i>&nbsp;&nbsp;&nbsp;&nbsp;Portfolio</a>
+
+                    <!--  WIP - Convert to link "a" once work is complete on Blog 
+<span style="text-decoration: none;" class="mdl-navigation__link" href=""><i class="fa fa-bold" style="font-size: 20px; color:#484848"></i>&nbsp;&nbsp;&nbsp;&nbsp;Blog - WIP</span> -->
+                </nav>
+            </div>
+
+            <main class="mdl-layout__content">
+
+                <div id="banner">
+                    <div id="banner1">
+                        <h1>Abhishek <br /> Madhusudhan</h1>
+                        <br />
+                        <h2> Software Development Engineer</h2>
+                        <hr />
+                        <ul class = "list-inline" style="display: block; margin: auto; text-align: center; font-size: 20px; color: white; font-weight: 500; "> 
+                            <li class = "list-inline-item"> Code -</li>
+                            <li class = "list-inline-item"> Optimize -</li>
+                            <li class = "list-inline-item"> Rewrite </li>
+                        </ul>
+                    </div>
+
+                    <div id="banner2" class=".container-fluid">
+                        <img class = ".img-fluid" src="assets/My-Images/BannerBackground_2.png"/>
+                    </div>
+                </div>
+
+                <!-- Employment History Section -->
+                <div id="emphist">
+                    <h2>Experience</h2>
+
+                    <div class="container">
+                        <div class="content">
+                            <div class="content-overlay"></div>
+                            <img src="assets/Education-Employment/georgeMasonUniversity.jpg" class="content-image rounded"/>
+                            <div class="content-details fadeIn-bottom">
+                                <h4 class="content-title">JAVA - 1 Year</h4>
+                                <p class="content-text" style="text-align:justify;"> 
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Instructing and assisting students in lab at the Department of Information Sciences and Technology for courses IT106 (Solving Using Computer Programming) and IT 206 (Object Oriented Techniques for IT Problem Solving) using JAVA.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="container">
+                        <div class="content">
+                            <div class="content-overlay"></div>
+                            <img id="job1" src="assets/Education-Employment/ibmGBS.jpg" class="content-image rounded"/>
+                            <div class="content-details fadeIn-bottom">
+                                <h4 class="content-title">IBM GBS - 2 Years</h4>
+                                <p class="content-text" style="text-align:justify;"> 
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; worked as an application developer implementing core functionalities, redesigning the system to improve centralization and automating web service calls to reduce faulty data from <b>10%</b> to <b>3%</b>.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Education History Section -->
+                <div id="eduhist" class="mdl-shadow--4dp">
+                    <h2>Education</h2>
+
+                    <div id="edu1" class="mdl-card mdl-shadow--4dp rounded">
+                        <div class="mdl-card__media">
+                            <img src="assets/Education-Employment/George%20Mason%20University%20-%20Logo.png" class = ".img-fluid"/>
+                        </div>
+
+                        <p><b>Master's in Computer Science | GPA: 3.5</b></p>
+
+                        <div class="mdl-card__actions mdl-card--border">
+                            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" style="display: block;" data-toggle="modal" data-target="#gmuModalCenter">
+                                View More
+                            </a>
+                        </div>
+                    </div>
+
+                    <div id="edu2" class="mdl-card mdl-shadow--4dp rounded">
+                        <div class="mdl-card__media">
+                            <img src="assets/Education-Employment/vtu.png" class = ".img-fluid"/>
+                        </div>
+
+                        <p><b> B.E in Computer Science </b></p>
+
+                        <div class="mdl-card__actions mdl-card--border">
+                            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" style="display: block;" data-toggle="modal" data-target="#vtuModalCenter">
+                                View More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Project Section -->
+                <div id="projects" class="android-more-section">
+                    <h2> PROJECTS <hr/>
+                    </h2>
+
+                    <!-- Project: Artificial Intelligence  -->
+                    <div id="aiCard" class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+                        <div class="mdl-card__media">
+                            <img src="assets/Projects/artificial_intelligence.png">
+                        </div>
+                        <div class="mdl-card__title">
+                            <h4 class="mdl-card__title-text">Artificial Intelligence</h4>
+                        </div>
+                        <div id="accordion">
+                            <div class="card">
+                                <div class="card-header" id="headingOne" >
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne;">
+                                            <span style="color: black">1. Connect 4 - AI</span>
+                                        </button>
+                                    </h5>
+                                </div>
+
+                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                                    <div class="card-body">
+                                        <p>Developed and implemented a Connect 4 AI in JAVA using min-max algorithm wherein given a board, a ply depth and evaluation function, the program returns a structure containing which move to make and how good it considers that move to win the game. Alpha-beta pruning was used to reduce computations and improve performance of the program.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header" id="headingTwo">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                            <span style="color: black"> 2. Tetris - AI </span>
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                                    <div class="card-body">
+                                        <p>Created a Tetris AI model in JAVA using genetic algorithm by evolving a set of weights for the game features  maximizing the fitness value associated with accomplishing the goal. This AI model can play well enough to ensure that the game lasts. Fitness is determined by the number of rows the agent is able to clear and the ratio of lines to the pieces played.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="headingThree">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                            <span style="color: black"> 3. Nim - AI </span>
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                                    <div class="card-body">
+                                        <p>Implemented a LISP program capable of learning the game Nim through reinforcement learning (Q-Learning). A Q-table is generated as the computer plays against its own policy for several iterations updating the utility in the Q-table. The generated Q-table could be used to play a game of Nim against a human opponent.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header" id="headingFour">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                            <span style="color: black"> 4. Neural Net System </span>
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                                    <div class="card-body">
+                                        <p>Implemented a neural network system using LISP to learn solutions to more complicated problems than the simple q-learning algorithm. By providing a neural network with feedback on the accuracy of its output, it is possible for the neural network to adjust its internal weights in order to achieve better results on subsequent runs. The process of updating weights through back-propagation, and producing outputs through forward-propagation allows a neural network to converge on more accurate solutions after repeated iterations of learning from test data. Simple-generalization and K-fold-validation techniques are used for validating the neural network system.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header" id="headingFive">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                            <span style="color: black"> 5. ECGA </span>
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+                                    <div class="card-body">
+                                        <p>Implemented an Evolutionary Computation Genetic Algorithm using LISP to find the best solution through various exploration and exploitation mechanism for problems like Symbolic Regression, Boolean-vector, Floating-point-vector.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header" id="headingSix">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                            <span style="color: black"> 6. POP - Planner </span>
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
+                                    <div class="card-body">
+                                        <p>Implemented a brute-force Partial Order Planner to resolve the two-block world, and three-block world problems creating a complete plan which has the goal condition reachable from the starting state after a sequence of operations are performed. </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Project: Networks, Systems & Security -->
+                    <div id = "nssCard" class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+                        <div class="mdl-card__media">
+                            <!-- TODO: Change Image -->
+                            <img src="assets/Projects/network_systems_security.png">
+                        </div>
+                        <div class="mdl-card__title">
+                            <h4 class="mdl-card__title-text">Network Systems &amp; Security</h4>
+                        </div>
+                        <!--                                <div class="mdl-card__supporting-text">-->
+                        <div id="accordion2">
+                            <div class="card">
+                                <div class="card-header" id="headingOneP3">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOneP3" aria-expanded="false" aria-controls="collapseOneP3">
+                                            <span style="color: black"> 1. Ripple Wallet </span>
+                                        </button>
+                                    </h5>
+                                </div>
+
+                                <div id="collapseOneP3" class="collapse show" aria-labelledby="headingOneP3" data-parent="#accordion">
+                                    <div class="card-body">
+                                        <p>Designed and Developed a public wallet interface for ripple that could be used to send, receive currencies, establish trust links with different accounts and view transaction history, compatible currencies associated with the ripple account on a test-net server.</p>
+                                    </div>
+                                </div>
+                            </div>  
+                            
+                            <div class="card">
+                                <div class="card-header" id="headingOneP3">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOneP3TWO" aria-expanded="false" aria-controls="collapseOneP3TWO">
+                                            <span style="color: black"> 2. Secure Game Web Application </span>
+                                        </button>
+                                    </h5>
+                                </div>
+
+                                <div id="collapseOneP3TWO" class="collapse show" aria-labelledby="headingOneP3TWO" data-parent="#accordion">
+                                    <div class="card-body">
+                                        <p>Developed a web based secure multiplayer checkers game using a client server architecture defending against some of the top OWASP vulnerabilities. Utilized Argon2 with salt for password hashing. Prepared assurance case to strengthen and defend the security claim.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Project: Web Development, Data Science and Programming -->
+                    <!-- TODO: Needs more description for Project number 2 & 3 -->
+                    <div id="wdpCard" class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+                        <div class="mdl-card__media">
+                            <img src="assets/Projects/web_program_dataScience.png">
+                        </div>
+                        <div class="mdl-card__title">
+                            <h4 class="mdl-card__title-text">Web Development, Programming &amp; Data Science</h4>
+                        </div>
+                        <div id="accordion">
+                            <div class="card">
+                                <div class="card-header" id="headingOneP2">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOneP2" aria-expanded="false" aria-controls="collapseOne">
+                                            <span style="color: black"> 1. Survey Application </span>
+                                        </button>
+                                        <!--                                        <a href=""><i class="fa fa-github-square" style="font-size: 1.5em; color: black; vertical-align: middle;"></i></a>-->
+                                    </h5>
+                                </div>
+
+                                <div id="collapseOneP2" class="collapse show" aria-labelledby="headingOneP2" data-parent="#accordion">
+                                    <div class="card-body">
+                                        <p>Designed and developed a survey page to collect, store and search the records using JSF managed beans, hibernate, REST and SOAP web service technologies. The application is hosted using AWS (Amazon Web Services - S3 and EC2).</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header" id="headingTwoP2">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwoP2" aria-expanded="false" aria-controls="collapseTwoP2">
+                                            <span style="color: black"> 2. State Of Union </span>
+                                        </button>
+                                        <a target = "_blank" href="https://www.predictiveanalyticsworld.com/patimes/mind-text-public-data-political-insights/9125"><i class="fa fa-newspaper-o" style="font-size: 1.2em; color: black; vertical-align: middle;"></i></a>
+                                    </h5>
+                                </div>
+                                <div id="collapseTwoP2" class="collapse" aria-labelledby="headingTwoP2" data-parent="#accordion">
+                                    <div class="card-body">
+                                        <p>Designed, Developed and Implemented a web based application to obtain political insights on State of the Union speeches in the past 2 decades.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="headingThreeP2">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThreeP2" aria-expanded="false" aria-controls="collapseThreeP2">
+                                            <span style="color: black">3. Personal Website </span>
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapseThreeP2" class="collapse" aria-labelledby="headingThreeP2" data-parent="#accordion">
+                                    <div class="card-body">
+                                        <p>Designed &amp; Developed a personal website using Bootstrap, Google MDL framework. Deployed using Amazon AWS EC2 with routing configurations between Route 65 and Google Domains.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+
+                    <!-- Project: Miscellaneous -->
+                    <div id = "miscCard" class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--4dp">
+                        <div class="mdl-card__media">
+                            <img src="assets/Projects/miscellaneous.png">
+                        </div>
+                        <div class="mdl-card__title">
+                            <h4 class="mdl-card__title-text">Miscellaneous</h4>
+                        </div>
+                        <div id="accordion2">
+                            <div class="card">
+                                <div class="card-header" id="headingOneP4">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOneP4" aria-expanded="false" aria-controls="collapseOneP4">
+                                            <span style="color: black">1. SBCA </span>
+                                        </button>
+                                        <a target = "_blank" href="https://github.com/AbhishekM369/sbca-nov18/blob/master/SBCA/src/sbca/SBCA.java"><i class="fa fa-github-square" style="font-size: 1.5em; color: black; vertical-align: middle;"></i></a>
+                                    </h5>
+                                </div>
+
+                                <div id="collapseOneP4" class="collapse show" aria-labelledby="headingOneP4" data-parent="#accordion">
+                                    <div class="card-body">
+                                        <p>A simple stack-based computer architecture simulation to read a program in assembly language and execute it. Since this architecture is stack-based, the only "register" is the program counter that tells the system the address of next instruction to execute.</p>
+                                    </div>
+                                </div>
+                            </div>  
+                        </div>
+                    </div>
+
+                </div>
+
+                <div id="dummyDiv" style="clear: both"></div>
+                <!-- Skills & Certifications -->
+                <div id="skills_certs">
+                    <!-- SKILLS -->
+                    <div id="skills" class = ".container-fluid">
+                        <h4> Skills </h4>
+                        <!-- ISSUE: Not responsive: check the division of 2 divs skills, certs -->
+                        <div id = "skillsOne">        
+                            <h5> Programming &amp; Databases</h5>
+                            <ul>
+                                <li> JAVA</li>
+                                <li> REST &amp; SOAP Web Services</li>
+                                <li> C </li>
+                                <li> LISP </li>
+                                <li> SQL </li>
+                                <li> Hibernate </li>
+                                <li> JDBC </li>
+                                <li> Spring MVC </li>
+                                <li> Spring Security </li>
+                            </ul>
+                        </div>
+
+                        <div id = "skillsTwo">
+                            <h5> User Interface &amp; Scripting </h5>
+                            <ul>
+                                <li> HTML </li>
+                                <li> CSS </li>
+                                <li> JavaScript ES6 </li>
+                                <li> Java Server Pages (JSP) </li>
+                                <li> Java Server Faces (JSF) </li>
+                                <li> JQuery </li>
+                                <li> JSON </li>
+                                <li> Java Swing </li>
+                                <li> Google MDL </li>
+                                <li> Bootstrap </li>
+                            </ul>
+                        </div>
+
+                        <div id = "skillsThree">
+                            <h5> Others </h5>
+                            <ul>
+                                <li> Programming </li>
+                                <li> Artificial Intelligence </li>
+                                <li> Blockchain Technologies </li>
+                                <li> ActiveVOS </li>
+                                <li> SVN </li>
+                                <li> Git </li>
+                                <li> Tomcat </li>
+                                <li> Eclipse </li>
+                                <li> Amazon AWS (S3 &amp; EC2) </li>
+                                <li> Agile </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- CERTIFICATIONS -->
+                    <div id="certs">
+                        <h4> Certification &amp; Awards</h4>
+                        <a href = "" data-toggle="modal" data-target="#ocpjpModalCenter"><img src="assets/Badges/Oracle-Certification-badge_OC-Professional.png"/></a>
+                        <a href = "" data-toggle="modal" data-target="#ocwModalCenter"><img src="assets/Badges/Oracle%20University%20-%20Custom%20Badge.png"/></a>
+                        <a href = "" data-toggle="modal" data-target="#courseraAndroid"><img src="assets/Badges/Coursera%20-%20Android%20Badge%20-%20Custom%20Made.png"/></a>
+                        <a href = "" data-toggle="modal" data-target="#ibmdeepskill"><img src="assets/Badges/Deep%20Skill%20-%20Full%20Badge.png"/></a>
+                        <a href = "" data-toggle="modal" data-target="#ibmmgraward"><img id ="mgraward" src="assets/Badges/Manager's%20Choice%20Award%20-%20Transparent%20-%20Final.png"/></a>
+                    </div>
+                </div>
+
+                <!-- TODO: Remove dummyDiv -->
+                <div id="dummyDiv4"></div>
+
+                <div id="publications" class="rounded">
+                    <div id="pub1" class = ".container-fluid">
+                        <h2>Publication</h2>
+                        <!-- TODO: Put some quote here -->
+                    </div>
+
+                    <div class="timeline">
+                        <ul>
+                            <li>
+                                <time>Aug 2017 - Dec 2017</time> 
+                                <p>
+                                    Research project - Mind Your Own Text: Public Data for political Insights. <br /> <br />
+                                    <a target = "_blank" href="https://www.predictiveanalyticsworld.com/patimes/mind-text-public-data-political-insights/9125">Published</a> an article based on the research project on "predictiveanalyticsworld.com". 
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <!-- This section has to exist to make sure it aligns -->
+                <section id="recommendations" class="section--footer mdl-color--white mdl-grid">
+
+                    <img src="assets/Recommendations/FerasBatraseh.jpg" class="rounded-circle" style="border: 2px solid green; box-shadow: 0 0 0 2px dimgrey;"/>
+
+                    <div class="section__text mdl-cell mdl-cell--4-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                        <h5>Feras Batarseh, Ph.D</h5>
+                        <div id="summary">
+                            <p class="collapse" id="collapseSummary">Besides being in one of my UX design and development graduate classes (SWE 632), Abhishek was an active author on one research project that was then published online with Predictive Analytics Times: 
+                                http://www.predictiveanalyticsworld.com/patimes/mind-text-public-data-political-insights/9125/
+
+                                When Abhishek was in class, he continuously illustrated high interest, hard work, good team spirit, and dedication. Abhishek has been a creative member of his project team; he also presented the work done in a very clear manner - any software team would be lucky to have him.</p> <a class ="collapsed" data-toggle="collapse" href="#collapseSummary" aria-expanded="false" aria-controls="collapseSummary"></a>
+                        </div>
+                    </div>
+
+                    <img src="assets/Recommendations/JianHongHu.jpg" class="rounded-circle" style="border: 2px solid blue; box-shadow: 0 0 0 2px dimgrey"/>
+
+                    <div class="section__text mdl-cell mdl-cell--4-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                        <h5>Jianhong Hu</h5>
+                        Abhishek is a smart, dedicate and detail-oriented software engineer. He has been a good team player and produced great results for the project team.
+                    </div>
+                </section>
+
+                <footer class="mdl-mega-footer">
+                    <div class="mdl-mega-footer--middle-section">
+                        <div class="mdl-mega-footer--drop-down-section">
+                            <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked>
+                            <h1 class="mdl-mega-footer--heading">Technologies Used</h1>
+                            <ul class="mdl-mega-footer--link-list">
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>Bootstrap</li>
+                                <li>Google MDL</li>
+                                <li>Javascript</li>
+                            </ul>
+                        </div>
+                        <div class="mdl-mega-footer--drop-down-section">
+                            <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked>
+                            <h1 class="mdl-mega-footer--heading">Inspired By</h1>
+                            <ul class="mdl-mega-footer--link-list">
+                                <li><a href="https://getmdl.io/templates/android-dot-com/index.html">Android.com Google MDL</a></li>
+                                <li><a href="https://getmdl.io/templates/text-only/index.html">Text Heavy Google MDL</a></li>
+                            </ul>
+                        </div>
+                        <div id="contactMe" class="mdl-mega-footer--drop-down-section">
+                            <div>
+                                <h1 class="mdl-mega-footer--heading" style="height: 60px">Contact Me</h1>
+                            </div>
+
+                            <div>
+                                <ul>
+                                    <li>
+                                        <i class="material-icons" >phone_in_talk</i>
+                                        <span style="color: white;">+1 571-340-7888</span>
+                                    </li>
+                                    <br />
+
+                                    <li>
+                                        <i class="fa fa-at"> 
+                                            <span style="color: white; font-size: 14px; vertical-align: middle; margin-left: 10px;">amadhusu\AT\gmu\DOT\edu</span>
+                                        </i>
+                                    </li>
+                                    <br />
+                                    <br />
+
+                                    <li>
+                                        <a target="_blank" href="assets/Certifications-Resume/Resume/Abhishek%20Madhusudhan%20-%20Resume.pdf">
+                                            <i class="fa fa-file-text-o"> 
+                                                <span style="color: white; font-size: 14px; vertical-align: middle; margin-left: 10px;">View Resume</span>
+                                            </i>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mdl-mega-footer--bottom-section">
+                        <div class="mdl-logo" style="float: right; ">
+                            <h6><b>Copyright © 2018 Abhishek Madhusudhan. All rights reserved.</b></h6>
+                        </div>
+                    </div>
+                </footer>
+            </main>
+        </div>
+
+
+
+        <!-- Bootstrap Accordian Libraries -->
+        <!--        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>-->
+        <script
+                src="http://code.jquery.com/jquery-3.2.1.js"
+                integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+                crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" ></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+        <!-- Bootstrap Google Material Design Libraries -->
+        <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+        <!-- Other plugins & Custom Scripts -->
+        <script type="text/javascript" src="scripts/jquery.inview2.min.js"></script>
+        <script type="text/javascript" src="scripts/publicationScript.js"></script>
+        <script type="text/javascript" src="scripts/smoothScrollScript.js"></script>
+
+
+
+    </body>
+</html>
