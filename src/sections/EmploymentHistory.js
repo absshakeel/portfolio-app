@@ -4,7 +4,7 @@ import * as React from 'react';
 import IBMGBS from '../assets/Education-Employment/ibmGBS.jpg';
 import CustomCard from '../commonComponents/CustomCard';
 import { SwipeableDrawer } from '@mui/material';
-import SwipeSelectionPage from '../commonComponents/CardSwipper';
+import SliderCard from '../commonComponents/SliderCard';
 const EmploymentHistory = () => {
 
     const employmentHistoryData =
@@ -38,15 +38,13 @@ const EmploymentHistory = () => {
     return (
         <>
             <div>
-                <SwipeSelectionPage/>
-
+                <SliderCard/>
             </div>
+
             <br />
             <br />
 
-            <div>
-
-                
+            <div>    
             </div>
         </>
     );

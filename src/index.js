@@ -1,5 +1,3 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
 import MenuIcon from '@mui/icons-material/Menu';
 import { TableBody, TableCell, TableRow } from '@mui/material';
 import AppBar from '@mui/material/AppBar';
@@ -10,15 +8,20 @@ import Paper from '@mui/material/Paper';
 import Table from '@mui/material/Table';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
+import React, { useEffect } from 'react';
+import ReactDOM from 'react-dom/client';
 import EmploymentHistory from './sections/EmploymentHistory';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import InstagramIcon from '@mui/icons-material/Instagram';
 
 const IndexApp = () => {
 
   return (
     <>
-
+    
         {/* Banner tool bar for navigation purposes */}
-        <AppBar >
+        <AppBar style={{ background: '#484848' }}>
           <Toolbar>
             <IconButton
               size="large"
@@ -28,6 +31,17 @@ const IndexApp = () => {
               sx={{ mr: 2 }} >
               <MenuIcon />
             </IconButton>
+
+          <div>
+            <a href="https://www.linkedin.com/in/abizsrm" target="_blank" title="Linkedin" rel="nofollow" >
+              <LinkedInIcon style={{ color: 'white', fontSize: 50 }} />
+            </a>
+            &nbsp;
+            <a href="https://github.com/abizsrm" target="_blank" title="GitHub" rel="nofollow">
+              <GitHubIcon style={{ color: 'white', fontSize: 50 }} />
+            </a>
+            &nbsp;
+          </div>
 
             {/* Gap between different navigation heads and menu icon*/}
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}> </Typography>
@@ -46,9 +60,7 @@ const IndexApp = () => {
         <br />
         <br />
         <br />
-        <br />
-        <br />
-        <br />
+        <br /> 
 
         {/* Employment & Education History*/}
         <Box component={Paper}>
