@@ -1,36 +1,25 @@
+import { Stack } from '@mui/material';
 import * as React from "react";
-import { Stack, Typography } from '@mui/material';
-import { default as bubbleShooter, default as candyCrash, default as clashRoyal } from '../assets/Education-Employment/ibmGBS.jpg';
 import { CardSwiper } from 'react-card-swiper';
+import IBMGBS from '../assets/Education-Employment/ibmGBS.jpg';
+import SliderCardContent from "./SliderCardContent";
 
-const SliderCard = () => {
+const SliderCard = ({data: sliderCardData}) => {
+
+  const sliderCardDataJson = sliderCardData; 
+
+  const mockData = [
+    { id: 1, src: sliderCardDataJson[0].image, content: <SliderCardContent data = {sliderCardDataJson[0].briefDescription}/> },
+  ]
 
   /* Functions to ensure that SliderCardRecurse works */ 
   const handleDismiss = (el, meta, id, action, operation) => { }
   const handleFinish = (status) => { }
   const handleEnter = (el, meta, id) => { }
 
-  const Content = () => (
-
-    <Typography px={2} style={{ color: 'black' }} variant="h6">
-      {/* Add content */}
-    </Typography>
-  )
-
-  const mockData = [
-    { id: '88552078', meta: { apk: 'some-apk-a.apk' }, src: bubbleShooter, content: <Content /> },
-    { id: 'fc7e0bd4', meta: { apk: 'some-apk-b.apk' }, src: candyCrash, content: <Content /> },
-    { id: 'da9a7067', meta: { apk: 'some-apk-c.apk' }, src: clashRoyal, content: <Content /> },
-  ]
-
-  const copyData = [
-    { id: '88552078', meta: { apk: 'some-apk-a.apk' }, src: bubbleShooter, content: <Content /> },
-    { id: 'fc7e0bd4', meta: { apk: 'some-apk-b.apk' }, src: candyCrash, content: <Content /> },
-    { id: 'da9a7067', meta: { apk: 'some-apk-c.apk' }, src: clashRoyal, content: <Content /> },
-  ]
-
-
+  /* Component to continue to slide through the slides once exhausted */
   const SliderCardRecurse = () => {
+    
     return (
       <>
         <CardSwiper
@@ -46,8 +35,9 @@ const SliderCard = () => {
   }
 
   return (
+    
     <div>
-      <Stack height={'250px'} width={'250px'} direction="column" >
+      <Stack height={'400px'} width={'300px'} direction="column" >
         <CardSwiper
           data={mockData}
           onEnter={handleEnter}
