@@ -13,12 +13,17 @@ import Typography from '@mui/material/Typography';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { Link } from 'react-scroll';
+import SliderCard from './commonComponents/SliderCard';
 
 // Employment History Data. 
 import ibmGbs from './assets/Education-Employment/ibmGBS.jpg';
 import gmu from './assets/Education-Employment/georgeMasonUniversity.jpg';
+import artificialIntelligence from './assets/Projects/artificial_intelligence.png'; 
+import networkSystemsSecurity from './assets/Projects/network_systems_security.png'; 
 
-import SliderCard from './commonComponents/SliderCard';
+// Import css. 
+import './css/projects.css';
+import ProjectAccordian from './projects/ProjectAccordian';
 
 
 const IndexApp = () => {
@@ -43,6 +48,18 @@ const IndexApp = () => {
     }
   ]
 
+  const projectHistoryData = [
+    {
+      id: 3, 
+      image: artificialIntelligence, 
+      projectType: "Artificial Intelligence"
+    }, 
+    {
+      id: 4, 
+      image: networkSystemsSecurity, 
+      projectType: "Network Systems & Security"
+    }
+  ]
   return (
     <>
 
@@ -73,13 +90,11 @@ const IndexApp = () => {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}> </Typography>
 
           {/* Different navigation heads. */}
-          <Button color="inherit" href="#">
             <Link to="employmentEducationHistory"
               spy={true}
               smooth={true}
               offset={50}
-              duration={500} > Home </Link>
-          </Button>
+              duration={500} > <Button style={{color: 'white'}}>Home </Button></Link>
           <Button color="inherit">Experience</Button>
           <Button color="inherit">Education</Button>
           <Button color="inherit">Projects</Button>
@@ -127,8 +142,18 @@ const IndexApp = () => {
       </Box>
 
       {/* Projects */}
-      <Box id="projectsHistory" component={Paper}>
+      <Box id="projects" component={Paper} >
+        <br /> 
+        <br />
+        <br /> 
+        <br />  
+        <h2 style={{textAlign: "center"}}> PROJECTS <hr/></h2>
 
+        <div style={{ display: "flex",
+             justifyContent: "center",
+             alignItems: "center"}}>
+          <ProjectAccordian data={projectHistoryData} /> 
+        </div>
       </Box>
 
     </>
