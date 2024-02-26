@@ -26,11 +26,27 @@ import networkSystemsSecurity from './assets/Projects/network_systems_security.p
 import webProgramDataScience from './assets/Projects/web_program_dataScience.png'; 
 import miscellaneous from './assets/Projects/miscellaneous.png'; 
 
-// Professional Certification & Awards Data. 
+// Professional Certification Data. 
 import ocpjpContent from './assets/Certifications-Resume/Certifications/OCPJP.jpg'; 
 import ocwcdContent from './assets/Certifications-Resume/Certifications/OW.jpg'; 
+import androidContent from './assets/Certifications-Resume/Certifications/Coursera Android.jpg'; 
+import awsContent from './assets/Certifications-Resume/Certifications/AWSCertifiedDA.jpg'; 
+
+// Professional Certifications Badges Data. 
 import ocwcdBadge from './assets/Badges/Oracle University - Custom Badge.png'; 
 import ocpjpBadge from './assets/Badges/Oracle-Certification-badge_OC-Professional.png'; 
+import androidBadge from './assets/Badges/Coursera - Android Badge - Custom Made.png'; 
+import awsBadge from './assets/Badges/awsAssociateDeveloper.png'; 
+
+// Awards Data. 
+import managerChoiceAwardIBM from './assets/Certifications-Resume/Certifications/mgrChoice.PNG'; 
+import deepskillAwardIBM from './assets/Certifications-Resume/Certifications/Deep Skill.PNG'; 
+import apexon2022Award from './assets/Certifications-Resume/Certifications/Apexon.Performance.Award.2022.jpg'; 
+
+// Awards Badges Data. 
+import managerChoiceAwardIBMBadge from './assets/Badges/Manager\'s Choice Award - Transparent - Final.png'; 
+import deepSkillAwardBadge from './assets/Badges/Deep Skill - Full Badge.png'; 
+import apexon2022AwardBadge from './assets/Badges/Apexon.Award.Badge.png'; 
 
 // Import css. 
 import './css/projects.css';
@@ -74,6 +90,41 @@ const IndexApp = () => {
       modalClickImage: ocwcdBadge, 
       modalTitle: 'Oracle Certified Web Component Developer.', 
       modalName: 'OCWCD'
+    }, 
+    {
+      id: 9, 
+      modalContentImage: androidContent, 
+      modalClickImage: androidBadge, 
+      modalTitle: 'Coursera Android Application Development.', 
+      modalName: 'CourseraAndroid'
+    }, 
+    {
+      id: 10, 
+      modalContentImage: awsContent, 
+      modalClickImage: awsBadge, 
+      modalTitle: 'Amazon Developer Associate.', 
+      modalName: 'AWSDA'
+    }, 
+    {
+      id: 11, 
+      modalContentImage: managerChoiceAwardIBM, 
+      modalClickImage: managerChoiceAwardIBMBadge, 
+      modalTitle: 'IBM Manager\'s Choice Award.', 
+      modalName: 'IBMMGRAward'
+    }, 
+    {
+      id: 12, 
+      modalContentImage: deepskillAwardIBM,
+      modalClickImage: deepSkillAwardBadge, 
+      modalTitle: 'IBM Deep Skill Award.', 
+      modalName: 'IBMDSAward' 
+    },
+    {
+      id: 13, 
+      modalContentImage: apexon2022Award, 
+      modalClickImage: apexon2022AwardBadge, 
+      modalTitle: 'Apexon 2022 Performance Award.', 
+      modalName: 'ApexonAward'
     }
   ]
 
@@ -210,15 +261,16 @@ const IndexApp = () => {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}> </Typography>
 
           {/* Different navigation heads. */}
+          <Button color="inherit">Home</Button>
           <Link to="employmentEducationHistory"
             spy={true}
             smooth={true}
-            offset={50}
-            duration={500} > <Button style={{ color: 'white' }}>Home </Button></Link>
+            offset={-75}
+            duration={500} > <Button style={{ color: 'white' }}>Experience</Button></Link>
           <Button color="inherit">Experience</Button>
           <Button color="inherit">Education</Button>
-          <Button color="inherit">Projects</Button>
-          <Button color="inherit">Skills &amp; Awards</Button>
+          <Link to="projects" spy={true} smooth={true} duration={500}><Button color="inherit">Projects</Button></Link>
+          <Link to="profCertsAwards" spy={true} smooth={true} duration={500}><Button color="inherit">Skills &amp; Awards</Button></Link>
           <Button color="inherit">Publications</Button>
           <Button color="inherit">Recommendations</Button>
         </Toolbar>

@@ -26,7 +26,7 @@ const CertsAndAwards = ({ data: certsAndAwardsData }) => {
     };
 
     const modalContentStyle = {
-        width: '800px', 
+        width: '700px', 
         overflow:'scroll'
     }
 
