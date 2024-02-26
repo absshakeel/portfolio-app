@@ -12,7 +12,7 @@ const ProjectAccordian = ({ data: projectData }) => {
     /*
      * TODO: Update this function to ensure that additional project data details are added. 
      */
-    function getAccordian()
+    function getAccordians()
     {
         var projectDataArr = new Array(); 
 
@@ -21,21 +21,35 @@ const ProjectAccordian = ({ data: projectData }) => {
             projectDataArr.push(
                 <div key={i} style={{marginRight: '10px'}}>
                     <CustomCard data = {projectData[i]}/>
-                    <Accordion  disableGutters style={{ width: '300px' }}>
-                        <AccordionSummary
-                            expandIcon={<ExpandMoreIcon />}
-                            aria-controls="panel1a-content"
-                            id="panel1a-header"
-                        >
-                            <Typography>What is a DSA course?</Typography>
-                        </AccordionSummary>
-                        <AccordionDetails>
-                            <Typography>
-                                This DSA course covers all topics.
-                            </Typography>
-                        </AccordionDetails>
-                    </Accordion>
+                     {getAccordian(projectData[i].projects)}
                 </div>
+            ); 
+        }
+
+        return projectDataArr; 
+    }
+
+    function getAccordian(projectData)
+    {
+        let projectDataArr = new Array(); 
+        let accordianKey = "accordian"; 
+        for(let i = 0; i < projectData.length; i++)
+        {
+            projectDataArr.push(
+                <Accordion key={accordianKey + i} disableGutters style = {{width: '300px'}}>
+                    <AccordionSummary
+                        expandIcon= {<ExpandMoreIcon/>}
+                        aria-controls="panel1a-content"
+                        id="panel1a-header">
+                    <Typography>{projectData[i].projectName}</Typography>
+                    </AccordionSummary>
+
+                    <AccordionDetails>
+                        <Typography>
+                            {projectData[i].projectDescription}
+                        </Typography>
+                    </AccordionDetails>
+                </Accordion>
             ); 
         }
 
@@ -51,7 +65,7 @@ const ProjectAccordian = ({ data: projectData }) => {
                 alignItems: "center"
             }}>
                 <Grid container spacing={2}>
-                  {getAccordian()}
+                  {getAccordians()}
                 </Grid>
             </div>
         </>
