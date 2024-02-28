@@ -15,6 +15,8 @@ import ReactDOM from 'react-dom/client';
 import { Link } from 'react-scroll';
 import SliderCard from './commonComponents/SliderCard';
 import CertsAndAwards from './profCertsAndAwards/CertsAndAwards';
+// Scripts
+
 
 // Employment History Data. 
 import ibmGbs from './assets/Education-Employment/ibmGBS.jpg';
@@ -50,7 +52,10 @@ import apexon2022AwardBadge from './assets/Badges/Apexon.Award.Badge.png';
 
 // Import css. 
 import './css/projects.css';
+import './css/publications.css'; 
 import ProjectAccordian from './projects/ProjectAccordian';
+import TimelineComponent from './commonComponents/TimelineComponent';
+import ExpandableSummary from './projects/ExpandableSummary';
 
 
 const IndexApp = () => {
@@ -231,9 +236,12 @@ const IndexApp = () => {
       ]
     }
   ]
+
+
+  
+
   return (
     <>
-
       {/* Banner tool bar for navigation purposes */}
       <AppBar style={{ background: '#484848' }}>
         <Toolbar>
@@ -346,6 +354,29 @@ const IndexApp = () => {
         </div>
       </Box>
 
+      {/* Publications */}
+      <Box id="publications" component={Paper}>
+        <TimelineComponent/>
+      {/* <div className="timeline" style={{backgroundColor: 'black'}}>
+                        <ul>
+                            <li>
+                                <time style={{color: 'white'}}>Aug 2017 - Dec 2017</time> 
+                                <p style={{color: 'white'}}>
+                                    Research project - Mind Your Own Text: Public Data for political Insights. <br /> <br />
+                                    <a target = "_blank" href="https://www.predictiveanalyticsworld.com/patimes/mind-text-public-data-political-insights/9125">Published</a> an article based on the research project on "predictiveanalyticsworld.com". 
+                                </p>
+                            </li>
+                        </ul>
+                    </div> */}
+      </Box>
+
+      <Box id="testimonials" component={Paper}>
+        {/* 1. Name the component right. 
+            2. Ensure to add carousel. (embed the table inside the carousel.)
+            3. Fix padding. 
+            4. Add proper images. */}
+        <ExpandableSummary/>
+      </Box>
     </>
   );
 }
