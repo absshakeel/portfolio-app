@@ -1,0 +1,29 @@
+/* Github Icon */
+.githubButton:hover {
+    color: black !important;
+}
+
+.githubButtonSize {
+    font-size: 50px;
+    color: white;
+    margin-right: 10px;
+}
+
+/* LinkedIn Icon */ 
+.linkedInButton:hover{
+    color: #0077b5 !important;
+    background-size: cover;
+}
+
+.linkedInButtonSize {
+    font-size: 50px; 
+    color: white; 
+    margin-right: 10px;
+}
+
+/* Navigation elements underline*/
+.navElements:hover{ 
+    text-decoration: underline !important;
+    text-decoration-color: white !important;
+    text-underline-offset: 5px;
+}

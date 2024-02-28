@@ -1,17 +1,20 @@
-/* Project Style Properties*/ 
+/* Project Style Properties*/
 /* TODO: Refine this. */
-#aiCard, #wdpCard, #nssCard, #miscCard{
-    float: left; 
+#aiCard,
+#wdpCard,
+#nssCard,
+#miscCard {
+    float: left;
 }
 
 #projects h2 {
-    margin: 0% 0% 5% 0%; 
+    margin: 0% 0% 5% 0%;
 }
 
 #projects hr {
-   background-color: white; 
+    background-color: white;
 }
 
 #projects p {
-    text-align:  justify; 
+    text-align: justify;
 }

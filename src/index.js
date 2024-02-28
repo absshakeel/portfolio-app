@@ -1,5 +1,4 @@
 import GitHubIcon from '@mui/icons-material/GitHub';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import MenuIcon from '@mui/icons-material/Menu';
 import { TableBody, TableCell, TableRow } from '@mui/material';
 import AppBar from '@mui/material/AppBar';
@@ -15,48 +14,49 @@ import ReactDOM from 'react-dom/client';
 import { Link } from 'react-scroll';
 import SliderCard from './commonComponents/SliderCard';
 import CertsAndAwards from './profCertsAndAwards/CertsAndAwards';
-// Scripts
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 // Employment History Data. 
-import ibmGbs from './assets/Education-Employment/ibmGBS.jpg';
 import gmu from './assets/Education-Employment/georgeMasonUniversity.jpg';
+import ibmGbs from './assets/Education-Employment/ibmGBS.jpg';
 
 // Project History Data. 
 import artificialIntelligence from './assets/Projects/artificial_intelligence.png';
+import miscellaneous from './assets/Projects/miscellaneous.png';
 import networkSystemsSecurity from './assets/Projects/network_systems_security.png';
-import webProgramDataScience from './assets/Projects/web_program_dataScience.png'; 
-import miscellaneous from './assets/Projects/miscellaneous.png'; 
+import webProgramDataScience from './assets/Projects/web_program_dataScience.png';
 
 // Professional Certification Data. 
-import ocpjpContent from './assets/Certifications-Resume/Certifications/OCPJP.jpg'; 
-import ocwcdContent from './assets/Certifications-Resume/Certifications/OW.jpg'; 
-import androidContent from './assets/Certifications-Resume/Certifications/Coursera Android.jpg'; 
-import awsContent from './assets/Certifications-Resume/Certifications/AWSCertifiedDA.jpg'; 
+import awsContent from './assets/Certifications-Resume/Certifications/AWSCertifiedDA.jpg';
+import androidContent from './assets/Certifications-Resume/Certifications/Coursera Android.jpg';
+import ocpjpContent from './assets/Certifications-Resume/Certifications/OCPJP.jpg';
+import ocwcdContent from './assets/Certifications-Resume/Certifications/OW.jpg';
 
 // Professional Certifications Badges Data. 
-import ocwcdBadge from './assets/Badges/Oracle University - Custom Badge.png'; 
-import ocpjpBadge from './assets/Badges/Oracle-Certification-badge_OC-Professional.png'; 
-import androidBadge from './assets/Badges/Coursera - Android Badge - Custom Made.png'; 
-import awsBadge from './assets/Badges/awsAssociateDeveloper.png'; 
+import androidBadge from './assets/Badges/Coursera - Android Badge - Custom Made.png';
+import ocwcdBadge from './assets/Badges/Oracle University - Custom Badge.png';
+import ocpjpBadge from './assets/Badges/Oracle-Certification-badge_OC-Professional.png';
+import awsBadge from './assets/Badges/awsAssociateDeveloper.png';
 
 // Awards Data. 
-import managerChoiceAwardIBM from './assets/Certifications-Resume/Certifications/mgrChoice.PNG'; 
-import deepskillAwardIBM from './assets/Certifications-Resume/Certifications/Deep Skill.PNG'; 
-import apexon2022Award from './assets/Certifications-Resume/Certifications/Apexon.Performance.Award.2022.jpg'; 
+import apexon2022Award from './assets/Certifications-Resume/Certifications/Apexon.Performance.Award.2022.jpg';
+import deepskillAwardIBM from './assets/Certifications-Resume/Certifications/Deep Skill.PNG';
+import managerChoiceAwardIBM from './assets/Certifications-Resume/Certifications/mgrChoice.PNG';
 
 // Awards Badges Data. 
-import managerChoiceAwardIBMBadge from './assets/Badges/Manager\'s Choice Award - Transparent - Final.png'; 
-import deepSkillAwardBadge from './assets/Badges/Deep Skill - Full Badge.png'; 
-import apexon2022AwardBadge from './assets/Badges/Apexon.Award.Badge.png'; 
+import apexon2022AwardBadge from './assets/Badges/Apexon.Award.Badge.png';
+import deepSkillAwardBadge from './assets/Badges/Deep Skill - Full Badge.png';
+import managerChoiceAwardIBMBadge from './assets/Badges/Manager\'s Choice Award - Transparent - Final.png';
 
 // Import css. 
-import './css/projects.css';
-import './css/publications.css'; 
-import ProjectAccordian from './projects/ProjectAccordian';
 import TimelineComponent from './commonComponents/TimelineComponent';
+import './css/projects.css';
+import './css/publications.css';
+import './css/banner-styles.css'; 
 import ExpandableSummary from './projects/ExpandableSummary';
+import ProjectAccordian from './projects/ProjectAccordian';
 
+import {faLinkedin, faGithub} from '@fortawesome/free-brands-svg-icons';
 
 const IndexApp = () => {
 
@@ -237,8 +237,36 @@ const IndexApp = () => {
     }
   ]
 
+  const boxSX = {
+    "&:hover": {
+      backgroundColor: 'rgba(0, 0, 0, 0.3)'
 
-  
+    }
+  }
+
+  const styles = theme => ({
+    hoverButton: {
+      '&:hover': {
+        backgroundColor: 'green', // Change this to the desired hover color
+      },
+    },
+  });
+
+  // useEffect(() => {
+  //   // Create a link element
+  //   const link = document.createElement('link');
+  //   link.rel = 'stylesheet';
+  //   link.href = 'https://fonts.googleapis.com/icon?family=Material+Icons';
+
+  //   // Append the link element to the document head
+  //   document.head.appendChild(link);
+
+  //   // Cleanup function to remove the link element when the component unmounts
+  //   return () => {
+  //     document.head.removeChild(link);
+  //   };
+  // }, []); 
+
 
   return (
     <>
@@ -255,32 +283,30 @@ const IndexApp = () => {
           </IconButton>
 
           <div>
-            <a href="https://www.linkedin.com/in/abizsrm" target="_blank" title="Linkedin" rel="nofollow" >
-              <LinkedInIcon style={{ color: 'white', fontSize: 50 }} />
+            <a href="https://www.linkedin.com/in/abizsrm" target="_blank" title="Linkedin" rel="nofollow" > 
+                <FontAwesomeIcon icon={faLinkedin} className="linkedInButton linkedInButtonSize"> </FontAwesomeIcon>
             </a>
-            &nbsp;
+
             <a href="https://github.com/abizsrm" target="_blank" title="GitHub" rel="nofollow">
-              <GitHubIcon style={{ color: 'white', fontSize: 50 }} />
+                <FontAwesomeIcon icon={faGithub}  className="githubButton githubButtonSize" ></FontAwesomeIcon>
             </a>
-            &nbsp;
           </div>
 
           {/* Gap between different navigation heads and menu icon*/}
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}> </Typography>
 
           {/* Different navigation heads. */}
-          <Button color="inherit">Home</Button>
+          <Button color="inherit" className="navElements">Home</Button>
           <Link to="employmentEducationHistory"
             spy={true}
             smooth={true}
             offset={-75}
-            duration={500} > <Button style={{ color: 'white' }}>Experience</Button></Link>
-          <Button color="inherit">Experience</Button>
-          <Button color="inherit">Education</Button>
-          <Link to="projects" spy={true} smooth={true} duration={500}><Button color="inherit">Projects</Button></Link>
-          <Link to="profCertsAwards" spy={true} smooth={true} duration={500}><Button color="inherit">Skills &amp; Awards</Button></Link>
-          <Button color="inherit">Publications</Button>
-          <Button color="inherit">Recommendations</Button>
+            duration={500} > <Button style={{ color: 'white' }} className="navElements">Experience</Button></Link>
+          <Button color="inherit" className="navElements">Education</Button>
+          <Link to="projects" spy={true} smooth={true} duration={500}><Button color="inherit" className="navElements">Projects</Button></Link>
+          <Link to="profCertsAwards" spy={true} smooth={true} duration={500}><Button color="inherit" className="navElements">Skills &amp; Awards</Button></Link>
+          <Button color="inherit" className="navElements">Publications</Button>
+          <Button color="inherit" className="navElements">Testimonials</Button>
         </Toolbar>
       </AppBar>
 
