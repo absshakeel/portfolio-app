@@ -322,7 +322,7 @@ const IndexApp = () => {
       </Box>
 
       {/* Projects */}
-      <Box id="projects" component={Paper} >
+      <Box id="projects" component={Paper} style={{backgroundColor: "#484848"}}>
         <br />
         <br />
         <br />
@@ -355,7 +355,10 @@ const IndexApp = () => {
       </Box>
 
       {/* Publications */}
-      <Box id="publications" component={Paper}>
+      <Box id="publications" component={Paper} style={{backgroundColor: "#484848"}}> 
+      <h2>
+        Publications
+      </h2>
         <TimelineComponent/>
       {/* <div className="timeline" style={{backgroundColor: 'black'}}>
                         <ul>
