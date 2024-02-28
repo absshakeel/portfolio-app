@@ -296,17 +296,30 @@ const IndexApp = () => {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}> </Typography>
 
           {/* Different navigation heads. */}
-          <Button color="inherit" className="navElements">Home</Button>
-          <Link to="employmentEducationHistory"
-            spy={true}
-            smooth={true}
-            offset={-75}
-            duration={500} > <Button style={{ color: 'white' }} className="navElements">Experience</Button></Link>
+          {/* TODO: Put this into its own component called Navigation Bar (Including the AppBar.), Move associated style sheets.*/}
+          <Link>
+            <Button color="inherit" className="navElements">Home</Button>
+          </Link>
+        
+          <Link to="employmentEducationHistory" spy={true} smooth={true} offset={-75} duration={500}> 
+            <Button style={{ color: 'white' }} className="navElements">Experience</Button></Link>
           <Button color="inherit" className="navElements">Education</Button>
-          <Link to="projects" spy={true} smooth={true} duration={500}><Button color="inherit" className="navElements">Projects</Button></Link>
-          <Link to="profCertsAwards" spy={true} smooth={true} duration={500}><Button color="inherit" className="navElements">Skills &amp; Awards</Button></Link>
-          <Button color="inherit" className="navElements">Publications</Button>
-          <Button color="inherit" className="navElements">Testimonials</Button>
+          
+          <Link to="projects" spy={true} smooth={true} duration={500}>
+            <Button color="inherit" className="navElements">Projects</Button>
+          </Link>
+          
+          <Link to="profCertsAwards" spy={true} smooth={true} duration={500}>
+            <Button color="inherit" className="navElements">Certs &amp; Awards</Button>
+          </Link>
+
+          <Link>
+            <Button color="inherit" className="navElements">Publications</Button>
+          </Link>
+
+          <Link>
+            <Button color="inherit" className="navElements">Testimonials</Button>
+          </Link>
         </Toolbar>
       </AppBar>
 
