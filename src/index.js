@@ -1,20 +1,10 @@
-import GitHubIcon from '@mui/icons-material/GitHub';
-import MenuIcon from '@mui/icons-material/Menu';
-import { TableBody, TableCell, TableRow } from '@mui/material';
-import AppBar from '@mui/material/AppBar';
+import { Table } from '@mui/material';
 import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import IconButton from '@mui/material/IconButton';
 import Paper from '@mui/material/Paper';
-import Table from '@mui/material/Table';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { Link } from 'react-scroll';
-import SliderCard from './commonComponents/SliderCard';
+import WebsiteFooter from './commonComponents/WebsiteFooter';
 import CertsAndAwards from './profCertsAndAwards/CertsAndAwards';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 // Employment History Data. 
 import gmu from './assets/Education-Employment/georgeMasonUniversity.jpg';
@@ -50,13 +40,17 @@ import managerChoiceAwardIBMBadge from './assets/Badges/Manager\'s Choice Award 
 
 // Import css. 
 import TimelineComponent from './commonComponents/TimelineComponent';
+import './css/banner-styles.css';
 import './css/projects.css';
 import './css/publications.css';
-import './css/banner-styles.css'; 
 import ExpandableSummary from './projects/ExpandableSummary';
-import ProjectAccordian from './projects/ProjectAccordian';
 
-import {faLinkedin, faGithub} from '@fortawesome/free-brands-svg-icons';
+
+// My landing page banner. 
+import { TableBody, TableCell, TableContainer, TableRow } from '@mui/material';
+import myBackground from './assets/My-Images/BannerBackground_2.png';
+import Banner from './commonComponents/NavigationBar';
+import Projects from './commonComponents/Projects';
 
 const IndexApp = () => {
 
@@ -270,112 +264,53 @@ const IndexApp = () => {
 
   return (
     <>
-      {/* Banner tool bar for navigation purposes */}
-      <AppBar style={{ background: '#484848' }}>
-        <Toolbar>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            sx={{ mr: 2 }} >
-            <MenuIcon />
-          </IconButton>
+    <div >
+      <br /> 
+      <br /> 
+      <br /> 
+      <br /> 
+      <Banner/>
 
-          <div>
-            <a href="https://www.linkedin.com/in/abizsrm" target="_blank" title="Linkedin" rel="nofollow" > 
-                <FontAwesomeIcon icon={faLinkedin} className="linkedInButton linkedInButtonSize"> </FontAwesomeIcon>
-            </a>
 
-            <a href="https://github.com/abizsrm" target="_blank" title="GitHub" rel="nofollow">
-                <FontAwesomeIcon icon={faGithub}  className="githubButton githubButtonSize" ></FontAwesomeIcon>
-            </a>
-          </div>
-
-          {/* Gap between different navigation heads and menu icon*/}
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}> </Typography>
-
-          {/* Different navigation heads. */}
-          {/* TODO: Put this into its own component called Navigation Bar (Including the AppBar.), Move associated style sheets.*/}
-          <Link>
-            <Button color="inherit" className="navElements">Home</Button>
-          </Link>
-        
-          <Link to="employmentEducationHistory" spy={true} smooth={true} offset={-75} duration={500}> 
-            <Button style={{ color: 'white' }} className="navElements">Experience</Button></Link>
-          <Button color="inherit" className="navElements">Education</Button>
-          
-          <Link to="projects" spy={true} smooth={true} duration={500}>
-            <Button color="inherit" className="navElements">Projects</Button>
-          </Link>
-          
-          <Link to="profCertsAwards" spy={true} smooth={true} duration={500}>
-            <Button color="inherit" className="navElements">Certs &amp; Awards</Button>
-          </Link>
-
-          <Link>
-            <Button color="inherit" className="navElements">Publications</Button>
-          </Link>
-
-          <Link>
-            <Button color="inherit" className="navElements">Testimonials</Button>
-          </Link>
-        </Toolbar>
-      </AppBar>
-
-      <br />
-      <br />
-      <br />
-      <br />
-
-      {/* Employment & Education History*/}
-      <Box id="employmentEducationHistory" component={Paper}>
-        <Table>
+      <Box id="landingPageHome" style={{backgroundColor: "#484848" }}>
+          <Table>
           <TableBody>
-            <TableRow>
-              <TableCell align="center">
-                Employment History
-              </TableCell>
 
-              <TableCell align="center">
-                Education History
-              </TableCell>
-            </TableRow>
+          
+          
+          <TableRow>
+            <TableCell>
+            {/* <Box key={"landingPageHomeLeft"}id="landingPageHomeLeft"> */}
+              <h1>Abhishek Madhusudhan</h1>
 
+              <h2> Software Development Engineer II</h2>
 
-            <TableRow>
-              <TableCell style={{ textAlign: 'center' }}>
-                <div style={{ display: 'inline-block' }}>
-                  <SliderCard data={employmentHistoryData} />
-                </div>
-              </TableCell>
-
-              <TableCell style={{ textAlign: 'center' }}>
-                <div style={{ display: 'inline-block' }}>
-                  <SliderCard data={educationHistoryData} />
-                </div>
-              </TableCell>
-            </TableRow>
+              <ul style={{ display: 'block', margin: 'auto', textAlign: 'center', color: 'white', fontWeight: '500', fontSize: '20px' }}>
+                <li style={{ display: 'inline' }}> Code -</li>
+                <li style={{ display: 'inline' }}> Optimize -</li>
+                <li style={{ display: 'inline' }}> Rewrite </li>
+              </ul>
+            {/* </Box> */}
+            </TableCell>
+            <TableCell align="center">
+              <img src={myBackground}></img>
+            </TableCell>
+          </TableRow>
           </TableBody>
-        </Table>
-      </Box>
 
-      {/* Projects */}
-      <Box id="projects" component={Paper} style={{backgroundColor: "#484848"}}>
-        <br />
-        <br />
-        <br />
-        <br />
-        <h2 style={{ textAlign: "center" }}> PROJECTS <hr /></h2>
+          </Table>
+           
 
-        <div style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center"
-        }}>
-          <ProjectAccordian data={projectHistoryData} />
-        </div>
-      </Box>
+            
+        </Box>
+
+      <Projects data = {projectHistoryData}/>
+<br /> 
+<br />
+<br />
+      
+
+     
 
       {/* Professional Certifications & Awards */}
       <Box id ="profCertsAwards" component={Paper}>
@@ -417,8 +352,13 @@ const IndexApp = () => {
             2. Ensure to add carousel. (embed the table inside the carousel.)
             3. Fix padding. 
             4. Add proper images. */}
-        <ExpandableSummary/>
+           <ExpandableSummary/>
       </Box>
+
+      <Box id = "websiteFooter" component={Paper}>
+        <WebsiteFooter/>
+      </Box>
+      </div>
     </>
   );
 }

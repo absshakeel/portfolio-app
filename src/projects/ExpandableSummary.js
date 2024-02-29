@@ -16,6 +16,7 @@ const ExpandableSummary = () => {
   return (
     <div>
       <Table>
+        <TableBody>
         <TableRow>
           <TableCell>
           <Avatar
@@ -43,7 +44,7 @@ const ExpandableSummary = () => {
           </TableCell>
         </TableRow>
 
-
+        </TableBody>
       </Table>
     </div>
   );
