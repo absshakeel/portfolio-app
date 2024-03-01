@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Table from '@mui/material/Table';
 import React from 'react';
-import SliderCard from './commonComponents/SliderCard';
+import SliderCard from './SliderCard';
 
 // Employment History Data. 
 
@@ -19,19 +19,17 @@ import SliderCard from './commonComponents/SliderCard';
 
 // Import css. 
 // import './css/projects.css';
-import './css/banner-styles.css';
-import './css/publications.css';
 
 
 // My landing page banner. 
 
-const employmentEducationHistory = () => {
+const EmploymentEducationHistory = ({data: employmentEducationHistory}) => {
     return (
         <>
         {/* Employment & Education History*/}
-      <Box id="employmentEducationHistory" component={Paper}>
+      <Box id="employmentEducationHistory" component={Paper} style={{borderRadius: '10px'}}>
        
-       <TableContainer>
+       <TableContainer >
         <Table>
           <TableBody>
             <TableRow>
@@ -48,13 +46,13 @@ const employmentEducationHistory = () => {
             <TableRow>
               <TableCell style={{ textAlign: 'center' }}>
                 <div style={{ display: 'inline-block' }}>
-                  <SliderCard data={employmentHistoryData} />
+                  <SliderCard data={employmentEducationHistory.employmentHistoryData} />
                 </div>
               </TableCell>
 
               <TableCell style={{ textAlign: 'center' }}>
                 <div style={{ display: 'inline-block' }}>
-                  <SliderCard data={educationHistoryData} />
+                  <SliderCard data={employmentEducationHistory.educationHistoryData} />
                 </div>
               </TableCell>
             </TableRow>
@@ -65,3 +63,5 @@ const employmentEducationHistory = () => {
         </>
     )
 }
+
+export default EmploymentEducationHistory; 

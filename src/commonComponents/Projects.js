@@ -1,6 +1,7 @@
 import Box from '@mui/material/Box';
 import React from 'react';
 import ProjectAccordian from '../projects/ProjectAccordian'
+import { Typography } from '@mui/material';
 // Employment History Data. 
 
 // Project History Data. 
@@ -23,12 +24,12 @@ const Projects = ({data: projectHistoryData}) => {
     return (
         <>
          {/* Projects */}
-      <Box id="projects" style={{backgroundColor: "#484848"}}>
-        <br />
-        <br />
-        <br />
-        <br />
-        <h2 style={{ textAlign: "center" }}> PROJECTS <hr /></h2>
+      <Box id="projects" style={{backgroundColor: "#484848", borderRadius: '10px'}}>
+      
+        <Typography variant='h6' align="center">PROJECTS</Typography>
+         
+         <br />
+         <br />
 
         <div style={{
           display: "flex",

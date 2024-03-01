@@ -1,4 +1,4 @@
-import { Table } from '@mui/material';
+import { Table, Typography } from '@mui/material';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import React from 'react';
@@ -51,6 +51,7 @@ import { TableBody, TableCell, TableContainer, TableRow } from '@mui/material';
 import myBackground from './assets/My-Images/BannerBackground_2.png';
 import Banner from './commonComponents/NavigationBar';
 import Projects from './commonComponents/Projects';
+import EmploymentEducationHistory from './commonComponents/EmploymentEducationHistory';
 
 const IndexApp = () => {
 
@@ -246,6 +247,11 @@ const IndexApp = () => {
     },
   });
 
+  const employmentEducationHistory = {
+    employmentHistoryData: employmentHistoryData, 
+    educationHistoryData: educationHistoryData
+  }
+
   // useEffect(() => {
   //   // Create a link element
   //   const link = document.createElement('link');
@@ -272,7 +278,7 @@ const IndexApp = () => {
       <Banner/>
 
 
-      <Box id="landingPageHome" style={{backgroundColor: "#484848" }}>
+      <Box id="landingPageHome" style={{backgroundColor: "#484848", borderRadius: '10px'}}>
           <Table>
           <TableBody>
 
@@ -304,21 +310,20 @@ const IndexApp = () => {
             
         </Box>
 
+        <EmploymentEducationHistory data={employmentEducationHistory}/>
+
       <Projects data = {projectHistoryData}/>
-<br /> 
-<br />
-<br />
-      
+
 
      
 
       {/* Professional Certifications & Awards */}
-      <Box id ="profCertsAwards" component={Paper}>
-        <br /> 
-        <br /> 
-        <h2 style={{textAlign: "center"}}>
+      <Box id ="profCertsAwards" component={Paper} style={{borderRadius: '10px'}}>
+        <Typography variant='h6' align="center">
+        {/* <h2 style={{textAlign: "center"}}> */}
           Professional Certifications &amp; Awards
-        </h2>
+        {/* </h2> */}
+        </Typography>
        <div style={{
           display: "flex",
           justifyContent: "center",
@@ -326,13 +331,15 @@ const IndexApp = () => {
         }}>
         <CertsAndAwards data = {certificationAndAwards}/>
         </div>
+        <br /> 
       </Box>
 
       {/* Publications */}
       <Box id="publications" component={Paper} style={{backgroundColor: "#484848"}}> 
-      <h2>
+      <br /> 
+      <Typography variant='h6' align="center">
         Publications
-      </h2>
+        </Typography>
         <TimelineComponent/>
       {/* <div className="timeline" style={{backgroundColor: 'black'}}>
                         <ul>
