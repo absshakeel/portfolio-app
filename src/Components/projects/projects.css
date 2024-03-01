@@ -1,0 +1,12 @@
+#projects 
+{
+    background-color: "#484848";
+    border-radius: '10px';
+}
+
+#projectAccordian
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

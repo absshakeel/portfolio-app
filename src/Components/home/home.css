@@ -1,0 +1,21 @@
+#home ul
+{
+    display: block;
+    margin: auto;
+    text-align: center;
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+    margin-right: 40px;
+}
+
+#homeIntro
+{
+    color: white;
+}
+
+#homeIntroImage
+{
+    border-radius: 10px;
+    border: 3px solid white; 
+}

@@ -1,7 +1,7 @@
 import React from 'react';
-import ReadMore from '../testimonials/ReadMore';
+import ReadMore from '../../testimonials/ReadMore';
 import { Avatar, CardMedia } from '@mui/material';
-import ibmGBS from '../assets/Education-Employment/ibmGBS.jpg'; 
+import ibmGBS from '../../assets/Education-Employment/ibmGBS.jpg'; 
 import { TableBody, TableCell, TableRow } from '@mui/material';
 import Table from '@mui/material/Table';
 

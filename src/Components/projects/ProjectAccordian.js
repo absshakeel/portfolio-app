@@ -5,7 +5,7 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import Typography from '@mui/material/Typography';
 import * as React from 'react';
-import CustomCard from '../commonComponents/CustomCard';
+import CustomCard from '../CustomCard';
 
 const ProjectAccordian = ({ data: projectData }) => {
 

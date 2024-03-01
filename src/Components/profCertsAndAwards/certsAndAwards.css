@@ -1,0 +1,11 @@
+#profCertsAwards
+{
+    border-radius: '10px';
+}
+
+#profCertsAwardsDiv
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
