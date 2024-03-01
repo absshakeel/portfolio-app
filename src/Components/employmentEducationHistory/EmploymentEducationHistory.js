@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Table from '@mui/material/Table';
 import React from 'react';
-import SliderCard from '../SliderCard';
+import SliderCard from './SliderCard';
 
 // Employment-Education History Data. 
 import gmu from '../../assets/Education-Employment/georgeMasonUniversity.jpg';

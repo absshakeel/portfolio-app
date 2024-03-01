@@ -1,7 +1,6 @@
 import { Stack } from '@mui/material';
 import * as React from "react";
 import { CardSwiper } from 'react-card-swiper';
-import IBMGBS from '../assets/Education-Employment/ibmGBS.jpg';
 import SliderCardContent from "./SliderCardContent";
 
 const SliderCard = ({data: sliderCardData}) => {
