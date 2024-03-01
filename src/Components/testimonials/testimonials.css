@@ -1,0 +1,14 @@
+.displayTextNextToAvatar {
+    margin: 20px;
+    text-align: center;
+}
+
+.avatar {
+    float: left;
+    margin: 5px;
+}
+
+.readMore {
+    text-align: justify;
+    font-size: 25px;
+}

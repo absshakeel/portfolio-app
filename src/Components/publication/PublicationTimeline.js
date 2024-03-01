@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import './publications.css';
 
-const TimelineComponent = () => {
+const PublicationTimeline = () => {
     const [isInView, setIsInView] = useState(false);
 
     useEffect(() => {
@@ -47,4 +48,4 @@ const TimelineComponent = () => {
     );
 };
 
-export default TimelineComponent;
+export default PublicationTimeline;

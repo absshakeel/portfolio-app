@@ -19,13 +19,13 @@ const Home = () => {
                                 <Typography id="homeIntro" variant='h4' align='center'>
                                     Abhishek Madhusudhan
                                 </Typography>
-                                <Typography variant='h6' align='center'>
+                                <Typography id="homeIntro2" variant='h6' align='center'>
                                     Software Development Engineer II
                                 </Typography>
                                     <ul>
                                         <li style={{ display: 'inline' }}> Develop -</li>
                                         <li style={{ display: 'inline' }}> Optimize -</li>
-                                        <li style={{ display: 'inline' }}> Rewrite </li>
+                                        <li style={{ display: 'inline' }}> Scale </li>
                                     </ul>
                             </TableCell>
 

@@ -110,7 +110,7 @@ const CertsAndAwards = () => {
     }
 
     function getCertsAndAwardsElements() {
-        let certsAndAwardsArr = new Array();
+        let certsAndAwardsArr = []; 
 
         for (let i = 0; i < certsAndAwardsData.length; i++) {
             certsAndAwardsArr.push(
@@ -140,7 +140,7 @@ const CertsAndAwards = () => {
         <>
             <Box id="profCertsAwards" component={Paper}>
                 <Typography variant='h6' align="center">
-                    Professional Certifications &amp; Awards
+                    PROFESSIONAL CERTIFICATIONS &amp; AWARDS
                 </Typography>
                 <div id="profCertsAwardsDiv">
                     {getCertsAndAwardsElements()}

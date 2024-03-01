@@ -40,11 +40,11 @@ const EmploymentEducationHistory = () => {
           <TableBody>
             <TableRow>
               <TableCell align="center">
-                Employment History
+                EMPLOYMENT HISTORY
               </TableCell>
 
               <TableCell align="center">
-                Education History
+                EDUCATION HISTORY
               </TableCell>
             </TableRow>
 

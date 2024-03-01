@@ -14,7 +14,7 @@ const ProjectAccordian = ({ data: projectData }) => {
      */
     function getAccordians()
     {
-        var projectDataArr = new Array(); 
+        var projectDataArr = [];
 
         for(let i = 0; i < projectData.length; i++)
         {
@@ -31,7 +31,7 @@ const ProjectAccordian = ({ data: projectData }) => {
 
     function getAccordian(projectData)
     {
-        let projectDataArr = new Array(); 
+        let projectDataArr = []; 
         let accordianKey = "accordian"; 
         for(let i = 0; i < projectData.length; i++)
         {

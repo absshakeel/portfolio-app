@@ -1,4 +1,4 @@
-import { Container, Table, TableCell, TableRow } from "@mui/material"
+import { Table, TableBody, TableCell, TableRow } from "@mui/material";
 import React from 'react';
 
 const WebsiteFooter = () => {
@@ -15,7 +15,8 @@ const WebsiteFooter = () => {
                 </div>
             </div>
 
-            {/* <Table>
+            {/**/} <Table>
+                <TableBody>
                 <TableRow>
                     <TableCell>
                         Technologies Used.
@@ -33,7 +34,8 @@ const WebsiteFooter = () => {
                         View Resume.
                     </TableCell>
                 </TableRow>
-            </Table> */}
+                </TableBody>
+            </Table> 
             
             <div style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }}>
                  Copyright © 2024 Abhishek Madhusudhan. All Rights Reserved.
