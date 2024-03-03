@@ -1,25 +1,25 @@
-import Box from '@mui/material/Box';
-import Paper from '@mui/material/Paper';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import WebsiteFooter from './Components/WebsiteFooter';
 
 // My website components. 
 import NavigationBar from './Components/NavigationBar';
 import EmploymentEducationHistory from './Components/employmentEducationHistory/EmploymentEducationHistory';
 import Home from './Components/home/Home';
-import CertsAndAwards from './Components/profCertsAndAwards/CertsAndAwards';
 import Projects from './Components/projects/Projects';
-import Testimonials from './Components/testimonials/Testimonials';
-import Publication from './Components/publication/Publication';
-
+import Publication from './Components/publication/Publication'; 
+import Box from '@mui/material/Box';
+import Paper from '@mui/material/Paper';
+import WebsiteFooter from './Components/WebsiteFooter'; 
+import CertsAndAwards from './Components/profCertsAndAwards/CertsAndAwards';
 
 const IndexApp = () => {
 
-
+  
   return (
     <>
       <div >
+        {/* <Timeline/> */}
+
         {/* Navigation Bar */}
         <NavigationBar />
 
@@ -38,18 +38,21 @@ const IndexApp = () => {
         <Projects />
 
         {/* Professional Certifications & Awards */}
+        {/* TODO: Add certs and awards here. */}        
         <CertsAndAwards />
 
         {/* Publications */}
         <Publication />
 
-        {/* Testimonials 
-        <Testimonials />*/}
+        {/* Testimonials */}
+        {/* <Testimonials /> */}
 
         {/* Website Footer */}
         <Box id="websiteFooter" component={Paper}>
           <WebsiteFooter />
+          
         </Box>
+
       </div>
     </>
   );

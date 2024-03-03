@@ -19,19 +19,48 @@ const WebsiteFooter = () => {
                 <TableBody>
                 <TableRow>
                     <TableCell>
-                        Technologies Used.
+                        Technologies Used
                     </TableCell>
 
                     <TableCell>
-                        Inspired By.
+                        Inspired By
                     </TableCell>
 
                     <TableCell>
-                        Contact Me.
+                        Connect
                     </TableCell>
 
                     <TableCell>
-                        View Resume.
+                        View Resume
+                    </TableCell>
+                </TableRow>
+                <TableRow>
+                    <TableCell>
+                        <ul>
+                            <li> React </li>
+                            <li> HTML </li>
+                            <li> CSS </li>
+                            <li> Javascript </li>
+                        </ul>
+                    </TableCell>
+                    
+                    <TableCell>
+                        <ul>
+                            <li><a href="https://getmdl.io/templates/android-dot-com/index.html">Android.com Google MDL</a></li>
+                        </ul>
+                    </TableCell>
+                    
+                    <TableCell>
+                        <ul>
+                            <li>TODO: Specify email such that when you click on it, it should open up in outlook or other email clients. </li>
+                            <li>Send message to me using the form/field.</li> 
+                        </ul>
+                    </TableCell>
+                    
+                    <TableCell>
+                        <ul>
+                            <li>TODO: Mention icon of resume for displaying resume.</li> 
+                        </ul>
                     </TableCell>
                 </TableRow>
                 </TableBody>
