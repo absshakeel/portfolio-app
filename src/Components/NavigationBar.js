@@ -12,8 +12,12 @@ import { Link } from 'react-scroll';
 // Import Styles. 
 import './navigation-bar.css';
 
+import { BrowserRouter as Router, Link as RouterLink, Route, Navigate, useNavigate } from "react-router-dom";
+import {Routes} from 'react-router-dom'; 
+import Blog from '../Blog/Blog';
 
 const NavigationBar = () => {
+
 
   return (
     <>
@@ -72,8 +76,17 @@ const NavigationBar = () => {
           <Link to="testimonials" spy={true} smooth={true} duration={500}>
             <Button color="inherit" className='navElements'>Testimonials</Button>
           </Link>
+
+          {/* TODO: Dynamically retrieve the url and assign it. Don't keep it static */}
+          <a class='navElements' href="http://localhost:3000/Blog">
+            <Button color="inherit" style={{color: "white"}} className='navElements'>BLOG</Button>
+          </a>
+         
         </Toolbar>
+
       </AppBar>
+
+      
     </>
   )
 }
