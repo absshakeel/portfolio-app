@@ -1,7 +1,6 @@
 import React from 'react';
 import Editor from './Editor';
 
-
 const AddPost = () => {
 
     // useEffect(() => {
@@ -11,9 +10,13 @@ const AddPost = () => {
     {/* TODO: Take time to think about this, this might evolve into content 
 management sysytem.*/}
 
+
+
+
+
     return (
         <>
-            <Editor/>
+            <Editor />
         </>
     )
 }

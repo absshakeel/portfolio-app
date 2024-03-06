@@ -19,6 +19,7 @@ const IndexApp = () => {
             <Route exact path="/" element={<Portfolio />} />
             <Route exact path="/Blog" element={<Blog />} />
             <Route exact path="/addPost" element={<AddPost/>}/>
+            <Route exact path="/previewPost" element={<AddPost/>}/>
           </Routes>
         </Router>
       </div>

@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { forwardRef, useEffect, useState } from "react";
 
 import { CodeHighlightNode, CodeNode } from "@lexical/code";
 import { AutoLinkNode, LinkNode } from "@lexical/link";
@@ -15,15 +15,22 @@ import { MarkdownShortcutPlugin } from "@lexical/react/LexicalMarkdownShortcutPl
 import { RichTextPlugin } from "@lexical/react/LexicalRichTextPlugin";
 import { HeadingNode, QuoteNode } from "@lexical/rich-text";
 import { TableCellNode, TableNode, TableRowNode } from "@lexical/table";
-import ToolbarPlugin from "./plugins/ToolbarPlugin";
-import TreeViewPlugin from "./plugins/TreeViewPlugin";
-import ExampleTheme from "./themes/ExampleTheme";
-
+import './Editor.css';
 import AutoLinkPlugin from "./plugins/AutoLinkPlugin";
 import CodeHighlightPlugin from "./plugins/CodeHighlightPlugin";
 import ListMaxIndentLevelPlugin from "./plugins/ListMaxIndentLevelPlugin";
-
-import './Editor.css'; 
+import MyOnChangePlugin from "./plugins/MyOnChangePlugin";
+import ToolbarPlugin from "./plugins/ToolbarPlugin";
+import ExampleTheme from "./themes/ExampleTheme";
+import TextContentListener from "./plugins/TextContextListenerPlugin";
+import {$generateHtmlFromNodes} from '@lexical/html';
+import RandomBuddy from "./RandomBuddy";
+import {
+  $getRoot,
+} from 'lexical';
+import { Button } from "react-scroll";
+import { useRef } from "react";
+import {EditorRefPlugin} from '@lexical/react/LexicalEditorRefPlugin'
 
 function Placeholder() {
   return <div className="editor-placeholder">Enter some rich text...</div>;
@@ -52,18 +59,30 @@ const editorConfig = {
   ]
 };
 
-export default function Editor() {
+
+
+
+
+const Editor = () => {
+  const [textValue, setTextValue] = useState("")
+
+  const randomBuddyRef = useRef(); 
+
+  useEffect(() => {
+    console.log(randomBuddyRef.current); 
+  }, [])
   return (
-    <LexicalComposer initialConfig={editorConfig}>
+    <>
+    <LexicalComposer initialConfig={editorConfig} >
       <div className="editor-container">
         <ToolbarPlugin />
-        <div className="editor-inner">
+        <div className="editor-inner" >
           <RichTextPlugin
             contentEditable={<ContentEditable className="editor-input" />}
             placeholder={<Placeholder />}
             ErrorBoundary={LexicalErrorBoundary}
           />
-          <HistoryPlugin />
+          <HistoryPlugin /> 
           {/* <TreeViewPlugin /> */}
           <AutoFocusPlugin />
           <CodeHighlightPlugin />
@@ -72,8 +91,21 @@ export default function Editor() {
           <AutoLinkPlugin />
           <ListMaxIndentLevelPlugin maxDepth={7} />
           <MarkdownShortcutPlugin transformers={TRANSFORMERS} />
+          <TextContentListener
+                            onChange={(text) => {
+                                if (text.trim() != "") setTextValue(text);
+                                else setTextValue(text.trim());
+                            }}
+                        />
+          {/* <MyOnChangePlugin onChange={onChange}/> */}
         </div>
       </div>
+
+      <RandomBuddy ref={randomBuddyRef} />
     </LexicalComposer>
+
+    </>
   );
 }
+
+export default Editor; 
